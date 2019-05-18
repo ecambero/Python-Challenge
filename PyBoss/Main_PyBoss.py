@@ -74,7 +74,7 @@ with open('employee_data.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     csv_header = next(csv_reader)
     line_count = 0
-    with open("PyBoss.csv", "w") as out_file:
+    with open("PyBoss.csv", "w", newline='') as out_file:
         csvwriter = csv.writer(out_file, delimiter=',')
         csvwriter.writerow(['Emp ID','Name','DOB','SSN','State'])
 #         # Write the first row (column headers)
@@ -95,7 +95,7 @@ with open('employee_data.csv') as csv_file:
             ssn = '***-**-' + row[3][-4:]
             vState = states[row[4]]
             csvwriter.writerow([row[0],first_name,last_name,(str(month)+"/"+str(day)+"/"+str(year)),ssn,vState])
-        
+            print((row[0]+", "+first_name + ", " + last_name + ", " + (str(month)+"/"+str(day)+"/"+str(year))+", "+ssn+", "+vState))
         
         
 #        
@@ -103,7 +103,7 @@ with open('employee_data.csv') as csv_file:
 #
 #f.write(
 #    
-#   (row[0]+", "+first_name + ", " + last_name + ", " + (str(month)+"/"+str(day)+"/"+str(year))+", "+ssn+", "+vState)
+
 #    
 #    
 #   )
