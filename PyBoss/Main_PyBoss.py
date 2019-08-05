@@ -95,7 +95,7 @@ with open('employee_data.csv') as csv_file:
             ssn = '***-**-' + row[3][-4:]
             vState = states[row[4]]
             csvwriter.writerow([row[0],first_name,last_name,(str(month)+"/"+str(day)+"/"+str(year)),ssn,vState])
-            print((row[0]+", "+first_name + ", " + last_name + ", " + (str(month)+"/"+str(day)+"/"+str(year))+", "+ssn+", "+vState))
+        
         
         
 #        
@@ -103,7 +103,7 @@ with open('employee_data.csv') as csv_file:
 #
 #f.write(
 #    
-
+#   (row[0]+", "+first_name + ", " + last_name + ", " + (str(month)+"/"+str(day)+"/"+str(year))+", "+ssn+", "+vState)
 #    
 #    
 #   )
